@@ -1,0 +1,336 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qatar World Cup Matches</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand text-warning"><h2>SAM SPORTS</h2></a>
+              <form class="d-flex">
+            
+                <button class="btn btn-warning" type="submit">donate</button>
+              </form>
+            </div>
+          </nav>
+
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+               <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid image1" src="https://thumbs.dreamstime.com/t/world-cup-soccer-ball-38193459.jpg" alt="football images"/>
+                </div>
+                    <div class="col-md-7">
+                        <br><br>
+                        <h1 class="display-4 text-dark"><b><span class="text-warning">Qatar</span> world cup 2022</b></h1>
+                        <br><p class="lead mx-3 text-dark"><b>Here are the groups that are in leads now on the competition.</b></p>
+                    </div>
+                  
+               </div>
+               
+            </div>
+            <br>
+            <svg style="margin-top: -30px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#212529" fill-opacity="1" d="M0,288L288,224L576,288L864,256L1152,128L1440,192L1440,320L1152,320L864,320L576,320L288,320L0,320Z"></path></svg>
+           
+        </div>
+         
+    </header>
+
+    <main >
+      
+        <h3 class="text-dark text-center text-uppercase">Participiant Groups </h3>
+        <hr>
+        <br>
+        <div class="container cont"><br><br>
+            <div class="row">
+                
+                <div class="col-sm-4">
+                    <div class="card ">
+                        <div class="card-header">
+                            <b> Group A </b>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <table  class="table ">
+                                    <thead>
+                                      <tr>
+                                        
+                                        <th scope="col">Teams</th>
+                                        <th scope="col">Point</th>
+                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th id="list0" scope="row">1</th>
+                                        <td id="pt0">Mark</td>
+                                       
+                                      </tr>
+                                      <tr>
+                                        <th id="list1" scope="row">2</th>
+                                        <td id="pt1">Jacob</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th id="list2" scope="row">3</th>
+                                        <td id="pt2" colspan="2">Larry the Bird</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th id="list3" scope="row">3</th>
+                                        <td id="pt3" colspan="2">Larry the Bird</td>
+                                        
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  <div id="enter" class="row">
+                                    <div class="col-md-6 mx-3">
+                                    <p>enter the new points here respectively<p>
+                                      <input id="ptu0" type="number"/>
+                                      <input id="ptu1" type="number"/>
+                                      <input id="ptu2" type="number"/>
+                                      <input id="ptu3" type="number"/>
+                                    </div>
+                                  </div>
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a onclick="add()" class="btn btn-warning">Change the points</a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a onclick="addData()" class="btn btn-warning">View this on Chart</a>
+                                </div>
+                            </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-7">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                      </div>
+                </div>
+<!--
+                <div class="col-sm-4">
+                    <div class="card ">
+                        <div class="card-header">
+                            <b> Group C </b>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <table  class="table ">
+                                    <thead>
+                                      <tr>
+                                        
+                                        <th scope="col">Teams</th>
+                                        <th scope="col">Point</th>
+                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th id="list0" scope="row">1</th>
+                                        <td id="pt0">Mark</td>
+                                       
+                                      </tr>
+                                      <tr>
+                                        <th id="list1" scope="row">2</th>
+                                        <td id="pt1">Jacob</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th id="list2" scope="row">3</th>
+                                        <td id="pt2" colspan="2">Larry the Bird</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th id="list3" scope="row">3</th>
+                                        <td id="pt3" colspan="2">Larry the Bird</td>
+                                        
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a  class="btn btn-warning">Go somewhere</a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-warning">Go somewhere</a>
+                                </div>
+                            </div>
+                         
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card ">
+                        <div class="card-header">
+                            <b> Group C </b>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <table  class="table ">
+                                    <thead>
+                                      <tr>
+                                        
+                                        <th scope="col">Teams</th>
+                                        <th scope="col">Point</th>
+                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th id="list0" scope="row">1</th>
+                                        <td id="pt0">Mark</td>
+                                       
+                                      </tr>
+                                      <tr>
+                                        <th id="list1" scope="row">2</th>
+                                        <td id="pt1">Jacob</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th id="list2" scope="row">3</th>
+                                        <td id="pt2" colspan="2">Larry the Bird</td>
+                                        
+                                      </tr>
+                                      <tr>
+                                        <th id="list3" scope="row">3</th>
+                                        <td id="pt3" colspan="2">Larry the Bird</td>
+                                        
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-warning">Go somewhere</a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="#" class="btn btn-warning">Go somewhere</a>
+                                </div>
+                            </div>
+                         
+                        </div>
+                       
+                      </div>
+                </div>
+                -->
+            </div>
+       
+            <br><br><br>
+        </div>
+
+    </main>
+    <script>
+       
+         
+        var people=['Netherlands', 'Ecuador', 'Senegal', 'Qatar']
+        var points=[4,2,3,4]
+        var barColors = ["red", "green","blue","orange"];
+        var Gname = "";
+
+// for display 
+function display(){
+ for(var i=0; i<people.length; i++)
+{
+  document.getElementById("list"+ i).innerHTML = people[i];
+  document.getElementById("pt" + i).innerHTML=points[i];
+  
+ 
+}
+}
+
+display();
+
+//for the new list display toggle
+function toggle(){
+var element = document.getElementById("enter")
+element.style.display="none";
+
+}
+toggle();
+
+// for rendering the new points
+
+function add(){
+var element = document.getElementById("enter")
+
+if(element.style.display=== "none")
+{
+element.style.display = "block";
+
+}
+
+else{
+element.style.display="none";
+}
+
+for(var j=0; j<points.length; j++)
+{
+points[j]=document.getElementById("ptu"+j).value;
+
+}
+
+display();
+
+}
+
+function addData() {
+  
+   
+
+    var ctx = document.getElementById("myChart")
+    
+    new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels:people,
+            datasets: [{
+              label: 'Group A',
+              backgroundColor: barColors,
+              data: points,
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        /*
+        Chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(points);
+    });
+Chart.update();
+        */
+
+}
+// charts
+
+
+
+
+
+      </script>
+
+
+</body>
+</html>

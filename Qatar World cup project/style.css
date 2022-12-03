@@ -1,0 +1,30 @@
+*{
+    margin:0px;
+    padding: 0px;
+ 
+}
+
+
+.image1{
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 2px 0px 20px gold;
+    margin-top: 45px;
+}
+
+main{
+    margin-top: -75px;
+    background-color: #E9ECEF;
+}
+
+hr{
+    border: 1px solid gold;
+}
+
+.cont{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 0px 20px rgb(17, 17, 17);
+}
